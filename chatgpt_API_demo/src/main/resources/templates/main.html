@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>chatgpt要約デモ</title>
+</head>
+<body>
+<form th:action="@{/chatgpt}" th:object="${chatgptObj}" method="post">
+    <span>要約したい言葉を以下の入力欄に入力してください</span>
+    <textarea  th:field="*{textFromDisplay}" ></textarea><br/>
+    <button type="submit">要約開始</button>
+
+    <div th:if="*{textFromChatgpt}" style="margin-top: 20px;">
+        <h3>ChatGPTの返事:</h3>
+        <div th:text="*{textFromChatgpt}"></div>
+    </div>
+</form>
+</body>
+</html>
