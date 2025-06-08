@@ -1,0 +1,2 @@
+# chatgptへのアクセスについて
+src/main/resouces/application.propertiesのopenai.api.keyに自分のapiキーをセットすること
